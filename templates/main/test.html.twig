@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="main">
+    <center><h3>{{ page }}</h3></center> 
+    <!-- article one -->
+    <div class="article-one">
+        <div class="container">
+            <div class="row">
+                <!-- Product card loop -->
+                {% for i in range(1, 10) %}
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="article mt-5">
+                                <div class="image-area">
+                                    <a href="{{ path('main_home') }}">
+                                        <img src="{{ asset('images/banner.jpg') }}" class="img-responsive"/>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                {% endfor %}
+
+                <!-- Product card loop end -->
+            </div>
+        </div>
+    </div>
+
+    </div>
+{% endblock %}
